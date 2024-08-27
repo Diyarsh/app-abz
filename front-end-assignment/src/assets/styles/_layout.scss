@@ -1,0 +1,146 @@
+@import "./_variables.scss";
+
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.section {
+  padding: 140px 0; // Ensured consistent padding for each section
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+}
+
+// Header and Hero section styles
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 60px;
+  background-color: $light-color;
+
+  .logo {
+    height: 34px;
+  }
+
+  .nav {
+    display: flex;
+    gap: 20px;
+
+    .nav-button {
+      width: 100px;
+      height: 34px;
+      background-color: $primary-color;
+      border-radius: 80px;
+      font-size: 16px;
+      font-family: $font-family;
+      color: $text-color;
+      text-align: center;
+      line-height: 34px;
+      cursor: pointer;
+      border: none;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}
+
+.hero {
+  margin-bottom: 50px; // Adjusted from 140px to reduce space between Hero and Get sections
+
+  .cta-button {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: $primary-color;
+    color: $text-color;
+    border: none;
+    cursor: pointer;
+    border-radius: 80px;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 140px 60px; // 140px top/bottom, 60px sides
+  background-color: transparent;
+
+  h2 {
+    font-size: 40px;
+    font-family: "Nunito", sans-serif;
+    color: rgba(0, 0, 0, 0.87);
+    text-align: center;
+    margin-bottom: 90px;
+  }
+
+  .button {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: $primary-color;
+    color: $text-color;
+    border: none;
+    cursor: pointer;
+    border-radius: 80px;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+// Specific section for GET request cards
+.get-section {
+  width: 904px;
+  margin: 140px auto;
+  padding: 0;
+  background-color: $section-background-color;
+  border-radius: 10px;
+
+  h2 {
+    text-align: center;
+    font-size: 40px;
+    color: $heading-color;
+    margin-bottom: 50px;
+  }
+
+  .user-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 29px;
+    margin: 0 auto;
+  }
+
+  .show-more {
+    width: 120px;
+    height: 34px;
+    margin: 50px auto 0;
+    background-color: $primary-color;
+    color: rgba(0, 0, 0, 0.87);
+    text-align: center;
+    border-radius: 17px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: $font-family;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}

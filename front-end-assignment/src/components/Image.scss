@@ -1,0 +1,20 @@
+.image-component {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  @include flex-center; // Reuse the flex-center mixin
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    @include flex-center; // Reuse the flex-center mixin
+  }
+}

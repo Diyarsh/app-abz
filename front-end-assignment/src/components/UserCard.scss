@@ -1,0 +1,64 @@
+@import "../assets/styles/_variables.scss";
+@import "../assets/styles/_mixins.scss";
+@import "../assets/styles/_typography.scss";
+@import "../assets/styles/_layout.scss";
+
+.user-card {
+  width: 282px; // Card width
+  height: 254px; // Card height to match the design specification
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+
+  img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    margin-bottom: 20px; // 20px space below avatar
+  }
+
+  h3 {
+    font-size: 16px;
+    color: $heading-color;
+    margin-bottom: 20px; // 20px space between name and role
+    line-height: 1.2em;
+    max-width: 242px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; // Handle long text by adding ellipsis
+  }
+
+  .role {
+    font-size: 14px;
+    color: $text-color;
+    margin-bottom: 20px; // 20px space between role and email
+    max-width: 242px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; // Handle long text by adding ellipsis
+  }
+
+  .email,
+  p {
+    font-size: 14px;
+    color: $text-color;
+    margin: 0 0 10px; // Ensure consistent spacing between elements
+    max-width: 242px;
+    text-align: center;
+    white-space: nowrap; // Prevent the text from wrapping to the next line
+    overflow: hidden;
+    text-overflow: ellipsis; // Show ellipsis (...) if the text overflows
+  }
+
+  p:last-child {
+    margin-bottom: 0; // No bottom margin for the last paragraph
+  }
+}

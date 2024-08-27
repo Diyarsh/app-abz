@@ -1,0 +1,36 @@
+@import "./_variables.scss";
+@import "./_mixins.scss";
+@import "./_reset.scss";
+@import "./_layout.scss";
+@import "./_typography.scss";
+@import "./_components.scss";
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+.App {
+  text-align: center;
+}
+
+.get-section {
+  margin-bottom: 140px; // Ensure consistent spacing between sections
+}
+
+.post-section {
+  padding-top: 140px; // Ensure consistent spacing between sections
+  margin: 0 auto; // Center the section without adding extra spacing
+}
+
+.user-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 29px;
+}
+
+.show-more {
+  margin-top: 50px;
+}

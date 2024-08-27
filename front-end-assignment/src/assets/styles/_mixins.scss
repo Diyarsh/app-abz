@@ -1,0 +1,52 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-style(
+  $bg-color,
+  $text-color,
+  $padding: 10px 20px,
+  $radius: 80px
+) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: $padding;
+  border-radius: $radius;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+@mixin input-style(
+  $border-color: $border-color,
+  $border-radius: $border-radius
+) {
+  width: 100%;
+  height: $input-height;
+  padding: $input-padding;
+  font-size: 16px;
+  color: #7e7e7e;
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  box-sizing: border-box;
+}
+
+@mixin typography-headline($font-size, $color) {
+  font-size: $font-size;
+  color: $color;
+  font-family: $font-family;
+}
+
+@mixin typography-body($font-size, $color) {
+  font-size: $font-size;
+  color: $color;
+  font-family: $font-family;
+  line-height: 1.6;
+}

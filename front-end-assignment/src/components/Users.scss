@@ -1,0 +1,43 @@
+@import "../assets/styles/_variables.scss";
+@import "../assets/styles/_mixins.scss";
+
+.get-section {
+  width: 904px;
+  margin: 0 auto; // Center the section horizontally
+  padding-bottom: 140px; // Ensure this is the only padding at the bottom
+  background-color: $section-background-color;
+  border-radius: 10px;
+
+  h2 {
+    text-align: center;
+    font-size: 40px;
+    color: $heading-color;
+    margin-bottom: 50px;
+  }
+
+  .user-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(282px, 1fr));
+    gap: 29px;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .show-more {
+    width: 120px;
+    height: 34px;
+    margin: 50px auto 0;
+    background-color: $primary-color;
+    color: rgba(0, 0, 0, 0.87);
+    text-align: center;
+    border-radius: 17px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: $font-family;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}

@@ -1,0 +1,40 @@
+// .user-cards {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-between; // Ensures space between the cards
+//   margin-top: 140px;
+//   gap: 29px; // Adds consistent spacing between cards
+
+.user-cards {
+  margin-top: 50px; // Adjusted from 140px to reduce excess spacing
+
+  .user-card {
+    width: 282px;
+    height: 254px;
+    padding: 16px;
+    background-color: $light-color;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+}
+
+.upload-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .upload-button {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background-color: $primary-color;
+    color: $light-color;
+    border: none;
+    cursor: pointer;
+    border-radius: 80px;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
