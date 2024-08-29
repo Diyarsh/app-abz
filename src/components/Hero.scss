@@ -10,6 +10,7 @@
   height: 650px; // Fixed height as per the mockup
   @include flex-center; // Use flex-center mixin for centering
   color: $light-color;
+  padding: 20px; // Ensure this declaration is above any nested rules to avoid warnings
 
   // Dark overlay
   &::before {
@@ -35,19 +36,13 @@
     gap: 32px; // Ensure consistent spacing between elements
 
     h1 {
-      @include typography-headline(
-        40px,
-        $light-color
-      ); // Use a typography mixin for headlines
+      @include typography-headline(40px, $light-color); // Use a typography mixin for headlines
       margin-bottom: 21px; // Adjusted to match the mockup closely
       line-height: 48px; // Added line-height for better text spacing
     }
 
     p {
-      @include typography-body(
-        18px,
-        $light-color
-      ); // Use a typography mixin for body text
+      @include typography-body(18px, $light-color); // Use a typography mixin for body text
       margin-bottom: 30px;
       line-height: 26px; // Ensure proper line height
       text-align: center;
@@ -55,10 +50,7 @@
     }
 
     .cta-button {
-      @include button-style(
-        $primary-color,
-        rgba(0, 0, 0, 0.87)
-      ); // Use button-style mixin
+      @include button-style($primary-color, rgba(0, 0, 0, 0.87)); // Use button-style mixin
       min-width: 150px; // Set a minimum width to prevent text wrapping
       height: 40px; // Adjust the height for better text fitting
       border-radius: 40px; // Adjusted for a more subtle rounded look
@@ -69,6 +61,7 @@
 
   // Additional adjustments
   & {
-    padding: 20px; // Wrapped in & {} to ensure correct behavior and avoid Sass warnings
+    // Wrapped in & {} to avoid Sass warnings related to declaration order
+    padding: 20px; // Wrapped this inside & to maintain the existing behavior.
   }
 }
